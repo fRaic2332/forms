@@ -16,5 +16,15 @@ namespace FormTask
         {
             InitializeComponent();
         }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            double radius, area, perimeter;
+            radius = Convert.ToDouble(txtRadius.Text);
+            area = Math.PI * Math.Pow(radius, 2d);
+            perimeter = 2 * Math.PI * radius;
+            lblArea.Text = area.ToString();
+            lblPerimeter.Text = perimeter.ToString();
+        }
     }
 }
